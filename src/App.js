@@ -5,6 +5,9 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import List from "./pages/list/List";
+import Single from "./pages/single/Single";
+import New from "./pages/new/New";
 
 
 function App() {
@@ -12,8 +15,11 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/home" element={<Home/>}/>
+          <Route path="/" element={<Home/>}/>
           <Route path="/login" element={<Login/>}/>
+          <Route path="/users" element={<List/>}/>
+          <Route path=":userId" element={<Single/>}/>
+          <Route path="new" element={<New/>}/>
         </Routes>
       </BrowserRouter>
     </div>
