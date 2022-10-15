@@ -10,7 +10,7 @@ import {
   } from "recharts";
   
 
-export default function Chart() {
+export default function Chart({aspect,title}) {
     const data = [
         { name: "January", Total: 1200 },
         { name: "February", Total: 2100 },
@@ -21,8 +21,8 @@ export default function Chart() {
       ];
   return (
     <div className="chart">
-      <div className="title">Last 6 Months (Revenue)</div>
-      <ResponsiveContainer width="100%" aspect={2/1}>
+      <div className="title">{title}</div>
+      <ResponsiveContainer width="100%" aspect={aspect}>
         <AreaChart
           width={730}
           height={250}
